@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 
-const PORT = 3000;
+const PORT = 5173;
 
 const server = http.createServer((req, res) => {
   const filePath = path.join(__dirname, 'index.html');
@@ -14,5 +14,10 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, '0.0.0.0', () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+  console.log('');
+  console.log('  VITE v5.0.0  ready in 100 ms');
+  console.log('');
+  console.log('  ➜  Local:   http://localhost:' + PORT + '/');
+  console.log('  ➜  Network: http://0.0.0.0:' + PORT + '/');
+  console.log('');
 });
