@@ -2,7 +2,10 @@
   "name": "corecontents",
   "version": "1.0.0",
   "scripts": {
-    "dev": "node server.js",
-    "start": "node server.js"
+    "dev": "vite",
+    "start": "vite"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
   }
 }
