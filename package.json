@@ -6,6 +6,7 @@
     "start": "vite"
   },
   "devDependencies": {
+    "acorn": "^8.17.0",
     "vite": "^6.0.0"
   }
 }

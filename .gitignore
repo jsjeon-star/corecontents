@@ -1,1 +1,3 @@
 node_modules/
+.openai_key
+_*.js
