@@ -120,7 +120,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .weekly-card{border-radius:14px;overflow:hidden;border:1px solid var(--gray-200);cursor:pointer;background:#fff;transition:transform 0.2s,box-shadow 0.2s;position:relative;width:390px;flex-shrink:0}
 .weekly-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,0.09)}
 .weekly-thumb{width:100%;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;font-family:var(--font-en);font-size:2rem;font-style:italic;color:rgba(255,255,255,0.35)}
-.weekly-rank{position:absolute;top:10px;right:10px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.9);font-family:var(--font-en);font-size:12px;font-weight:800;color:var(--black);display:flex;align-items:center;justify-content:center}
+.weekly-rank{position:absolute;top:10px;right:10px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.9);font-family:var(--font-en);font-size:12px;font-weight:800;color:var(--black);display:flex;align-items:center;justify-content:center;z-index:2}
+.weekly-thumb{overflow:hidden}
+.home-thumb-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 .weekly-info{padding:0.75rem 0.9rem 0.85rem}
 .weekly-name{font-family:var(--font-ko);font-size:14px;font-weight:700;color:var(--black);margin-bottom:3px;line-height:1.3}
 .weekly-sub{font-family:var(--font-ko);font-size:11px;color:var(--gray-600)}
@@ -1089,7 +1091,7 @@ function initHomeSections(){
       card.onclick = function(){ if(d.dummy) return; openPopup(d.catId, d.idx); };
       card.innerHTML =
         '<div class="rolling-thumb" style="background:'+d.cat.color+'">'
-        +d.item.symbol
+        +(d.item.img?'<img class="home-thumb-img" src="'+d.item.img+'" alt="" loading="lazy">':d.item.symbol)
         +'</div>'
         +'<div class="rolling-info">'
         +'<div class="rolling-name">'+(currentLang==="en"?(d.item.titleMainEn||d.item.titleMain):d.item.titleMain)+'</div>'
@@ -1110,7 +1112,7 @@ function initHomeSections(){
       card.innerHTML =
         '<div class="weekly-thumb" style="background:'+d.cat.color+'">'
         +'<div class="weekly-rank">'+(rank+1)+'</div>'
-        +d.item.symbol
+        +(d.item.img?'<img class="home-thumb-img" src="'+d.item.img+'" alt="" loading="lazy">':d.item.symbol)
         +'</div>'
         +'<div class="weekly-info">'
         +'<div class="weekly-name">'+(currentLang==="en"?(d.item.titleMainEn||d.item.titleMain):d.item.titleMain)+'</div>'
