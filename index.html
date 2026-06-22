@@ -50,12 +50,13 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .mosaic-cell .cell-bg{position:absolute;inset:0;background-size:78% auto;background-repeat:no-repeat;background-position:center 42%;transition:transform 0.4s;opacity:0.62;filter:blur(0.4px)}
 .mosaic-cell:hover .cell-bg{transform:scale(1.04)}
 .mosaic-cell::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(255,255,255,0.9) 0%,rgba(255,255,255,0.45) 22%,transparent 42%);pointer-events:none}
-.mc-imagine .cell-bg{background-image:url('/thumbs/home-imagine.png');background-size:cover;background-position:center top;opacity:0.72;filter:none}
-.mc-story .cell-bg{background-image:url('/thumbs/story-06.png')}
-.mc-design .cell-bg{background-image:url('/thumbs/design-05.png')}
-.mc-steam .cell-bg{background-image:url('/thumbs/steam-20.png')}
-.mc-artist .cell-bg{background-image:url('/thumbs/artist-01.png')}
-.mc-studio .cell-bg{background-image:url('/thumbs/studio-13.png')}
+.mosaic-cell.mc-imagine .cell-bg,.mosaic-cell.mc-story .cell-bg,.mosaic-cell.mc-design .cell-bg,.mosaic-cell.mc-steam .cell-bg,.mosaic-cell.mc-artist .cell-bg,.mosaic-cell.mc-studio .cell-bg{background-size:cover;background-position:center top;opacity:0.72;filter:none}
+.mc-imagine .cell-bg{background-image:url('/thumbs/home-imagine.png')}
+.mc-story .cell-bg{background-image:url('/thumbs/home-story.png')}
+.mc-design .cell-bg{background-image:url('/thumbs/home-design.png')}
+.mc-steam .cell-bg{background-image:url('/thumbs/home-steam.png')}
+.mc-artist .cell-bg{background-image:url('/thumbs/home-artist.png')}
+.mc-studio .cell-bg{background-image:url('/thumbs/home-studio.png')}
 .mosaic-photo-hint{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px;opacity:0.5;pointer-events:none;z-index:0}
 .mosaic-photo-hint svg{width:28px;height:28px;opacity:0.4}
 .mosaic-photo-hint span{font-family:var(--font-en);font-size:10px;font-weight:500;letter-spacing:0.1em;color:rgba(0,0,0,0.4)}
