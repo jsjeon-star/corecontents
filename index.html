@@ -47,9 +47,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .hero-mosaic-bottom{display:grid;grid-template-columns:1.4fr 1fr 2fr}
 .mosaic-cell{display:flex;flex-direction:column;justify-content:flex-end;padding:1.25rem 1.5rem;position:relative;overflow:hidden;cursor:pointer;text-decoration:none}
 .mosaic-cell,.mosaic-cell:hover,.mosaic-kw-num,.mosaic-kw-en,.mosaic-kw-ko{text-decoration:none}
-.mosaic-cell .cell-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 0.4s}
-.mosaic-cell:hover .cell-bg{transform:scale(1.03)}
-.mosaic-cell::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(255,255,255,0.95) 0%,rgba(255,255,255,0.6) 24%,rgba(255,255,255,0.15) 42%,transparent 60%);pointer-events:none}
+.mosaic-cell .cell-bg{position:absolute;inset:-12px;background-size:cover;background-position:center;transition:transform 0.4s;opacity:0.38;filter:blur(2.5px)}
+.mosaic-cell:hover .cell-bg{transform:scale(1.04)}
+.mosaic-cell::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(255,255,255,0.88) 0%,rgba(255,255,255,0.62) 45%,rgba(255,255,255,0.45) 100%);pointer-events:none}
 .mc-imagine .cell-bg{background-image:url('/thumbs/imagine-04.png')}
 .mc-story .cell-bg{background-image:url('/thumbs/story-06.png')}
 .mc-design .cell-bg{background-image:url('/thumbs/design-05.png')}
