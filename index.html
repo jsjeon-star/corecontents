@@ -406,9 +406,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
   <section class="hero">
     <div class="hero-left">
       <div class="hero-bg-art"></div>
-      <div class="hero-eyebrow" data-ko="Digital Art Platform for Kids" data-en="Digital Art Platform for Kids">Digital Art Platform for Kids</div>
-      <h1 class="hero-title">Art is<br><em>thinking</em><br>out loud.</h1>
-      <p class="hero-sub" data-ko="디지털 드로잉, AI 협업, 갤러리 전시까지 — 아이들이 예술가처럼 생각하고 디자이너처럼 만드는 공간입니다." data-en="From digital drawing to AI collaboration and gallery exhibitions — a space where kids think like artists and create like designers.">디지털 드로잉, AI 협업, 갤러리 전시까지 — 아이들이 예술가처럼 생각하고 디자이너처럼 만드는 공간입니다.</p>
+      <div class="hero-eyebrow" data-ko="Creative Playground for Kids" data-en="Creative Playground for Kids">Creative Playground for Kids</div>
+      <h1 class="hero-title">Content Archive<br>where <em>ideas</em><br>turn into art</h1>
+      <p class="hero-sub" data-ko="아이들이 마음껏 상상하고, 자유롭게 그리며, 서로의 생각을 나누는 모든 창작의 시작점입니다." data-en="The starting point of all creation, where kids freely imagine, draw, and share their ideas.">아이들이 마음껏 상상하고, 자유롭게 그리며, 서로의 생각을 나누는 모든 창작의 시작점입니다.</p>
     </div>
     <div class="hero-right">
       <!-- 상단 3칸 -->
@@ -1008,11 +1008,7 @@ function toggleLang(){
   // hero title 이탤릭 부분은 html이라 별도 처리
   var heroTitle = document.querySelector('.hero-title');
   if(heroTitle){
-    if(currentLang==='en'){
-      heroTitle.innerHTML = 'Art is<br><em>thinking</em><br>out loud.';
-    } else {
-      heroTitle.innerHTML = 'Art is<br><em>thinking</em><br>out loud.';
-    }
+    heroTitle.innerHTML = 'Content Archive<br>where <em>ideas</em><br>turn into art';
   }
 
   // 7. 검색창 placeholder
