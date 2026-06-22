@@ -897,6 +897,8 @@ function openPopup(catId,idx){
   document.getElementById('popup-title-main').textContent=currentLang==='en'?(item.titleMainEn||item.titleMain):item.titleMain;
   document.getElementById('popup-title-sub').textContent=currentLang==='en'?(item.titleSubEn||item.titleSub):item.titleSub;
   document.getElementById('popup-desc').textContent=currentLang==='ko'?item.desc:(item.descEn||item.desc);
+  var _pst=document.getElementById('popup-skills-title');
+  if(_pst) _pst.textContent = currentLang==='en' ? 'Objectives' : '핵심 역량';
   var popupSkills = currentLang==='en' ? (item.skillsEn||item.skills) : item.skills;
   document.getElementById('popup-skill-tags').innerHTML=popupSkills.map(function(s){
     return '<span class="popup-skill-tag" style="color:'+cat.colorDark+';border-color:'+cat.color+';background:'+cat.colorBg+'">'+s+'</span>';
